@@ -102,8 +102,17 @@
      pavucontrol
      xclip
      acpi
+     quickemu
+     quickgui
+     fzf
+     python3
+     python311Packages.pip
+     cargo
+     rustc
+     krita
   ];
- 
+  programs.ssh.askPassword = "";
+
   fonts.packages = with pkgs; [
      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
@@ -125,6 +134,7 @@
   };
   
   programs.bash.loginShellInit = "wal -i Linux-System/WM/Wallpapers/wallpaper_japan.png -b 3c3838";
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
