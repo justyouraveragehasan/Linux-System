@@ -134,7 +134,7 @@
   };
   
   programs.bash.loginShellInit = "wal -i Linux-System/WM/Wallpapers/wallpaper_japan.png -b 3c3838";
-  
+  hardware.opengl.extraPackages = with pkgs; [ intel-media-driver ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
